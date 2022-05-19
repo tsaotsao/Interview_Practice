@@ -3,9 +3,9 @@
 #include <stdlib.h>
 
 /**
- * @brief fibonacci sequence recursive method
- *   
- * @param n 
+ * @brief fibonacci sequence recursive method  O(n)
+ *        
+ * @param n -- index of the sequence
  * @return int 
  */
 int fib_rec(int n)
@@ -13,6 +13,14 @@ int fib_rec(int n)
     if(n==0 | n==1) return n;
     else return (fib_rec(n-1)+fib_rec(n-2));
 }
+
+/**
+ * @brief dynamic programming method:
+ *        use MEMO to record the sequence 
+ * 
+ * @param n 
+ * @return uint64_t 
+ */
 
 uint64_t fib_DP(uint16_t n)
 {
@@ -24,7 +32,7 @@ uint64_t fib_DP(uint16_t n)
     {
         memo[i] = memo[i-1] + memo[i-2];
     }
-    return memo[n];
+    return memo[n]; // return with uint64_t, test for big number
 }
 
 
