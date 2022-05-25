@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdint.h>
-#define SEC_PER_YEAR 365*24*60*60
+#define SEC_PER_YEAR 365*24*60*60UL
 
 
 int main(int argc, char const *argv[])
