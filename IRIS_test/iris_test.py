@@ -10,9 +10,9 @@ from sklearn.datasets import load_iris
 iris = load_iris()
 df = pd.DataFrame(iris['data'], columns=iris['feature_names'])
 df['target'] = iris['target']
-df = df[['sepal length (cm)', 'petal width (cm)','target']]
+df = df[['sepal width (cm)', 'petal length (cm)','target']]
 
-df = df.iloc[0:100]
+df = df.iloc[0:]
 
 df.head()
 print(df)
