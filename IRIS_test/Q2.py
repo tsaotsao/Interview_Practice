@@ -12,7 +12,7 @@ df = pd.DataFrame(iris['data'], columns=iris['feature_names'])
 df['target'] = iris['target']
 df = df[['sepal length (cm)', 'petal width (cm)','target']]
 
-df = df.iloc[0:]
+df = df.iloc[0:100]
 
 df.head()
 print(df)
