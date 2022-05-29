@@ -25,10 +25,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y,
                                                    test_size=0.33, random_state=126)
 
 from sklearn.neighbors import KNeighborsClassifier
-model = KNeighborsClassifier()
-model.fit(X_train, y_train)
-print(model.score(X_test, y_test))
-
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import make_pipeline
 accs = []
