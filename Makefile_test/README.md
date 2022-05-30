@@ -1,2 +1,4 @@
 ## make finding rule: 
-    _*GNUmakefile, makeifle, Makefile*_    
+    -GNUmakefile 
+    -makeifle
+    -Makefile    
