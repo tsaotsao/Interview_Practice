@@ -1,10 +1,15 @@
-all: main.o add.o
-	gcc -o main main.o add.o
-main.o: main.c add.h
-	gcc -c main.c 
-add.o: add.c add.h
-	gcc -c add.c
+objects = main.o add.o
+exe = main
+CC = gcc
 
+all: ${objects}
+	${CC} -o ${exe} ${objects}
+main.o: main.c 
+	${CC} -c main.c 
+add.o: add.c 
+	${CC} -c add.c
+.PHONY: clean
 clean:
 	rm -f *.o
 	rm -f main
+	rm -f *.out
