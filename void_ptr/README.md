@@ -23,7 +23,7 @@ int main(void)
 }
 ```
 
- ### ***void pointers cannot be dereferenced.*** 
+ ### **void pointers cannot be dereferenced.**
  For example the following program doesn’t compile.
 
 ```c
@@ -38,10 +38,21 @@ int main()
 ```
 Compiler Error: 'void*' is not a pointer-to-object type 
 ```
+### **C standard dosen't allow pointer arithmetic with pointers. However in GNU C is allowed by considering the size of void -> 1** 
+```c
+printf("%lu", sizeof(void)); // 1
+```
+
+Also, in GNU C can operate **void\*** like following:
+```c
+int main()
+{
+    int array[2] = {1, 2};
+    void *ptr = &a;
+    ptr = ptr + sizeof(int);
+    printf("%d", *(int*)ptr); // 2 (which assigned in array[1])
+}
 
 
 
-
-
-
-
+**Reference: https://www.geeksforgeeks.org/void-pointer-c-cpp/**
