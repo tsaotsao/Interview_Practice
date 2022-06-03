@@ -52,7 +52,7 @@ int main()
     ptr = ptr + sizeof(int);
     printf("%d", *(int*)ptr); // 2 (which assigned in array[1])
 }
-
+```
 
 
 **Reference: https://www.geeksforgeeks.org/void-pointer-c-cpp/**
