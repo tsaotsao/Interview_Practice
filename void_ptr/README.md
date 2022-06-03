@@ -38,7 +38,7 @@ int main()
 ```
 Compiler Error: 'void*' is not a pointer-to-object type 
 ```
-### **C standard dosen't allow pointer arithmetic with pointers. However in GNU C is allowed by considering the size of void -> 1** 
+C standard dosen't allow pointer arithmetic with pointers. However in GNU C is allowed by considering the size of void -> 1 
 ```c
 printf("%lu", sizeof(void)); // 1
 ```
