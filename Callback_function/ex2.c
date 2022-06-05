@@ -47,10 +47,8 @@ int main(int argc, char const *argv[])
             ObjectCall(&objB);
             break;
         default:
-            printf("No this guy");
+            printf("No this guy\n");
             break;
     }
-
     return 0;
-int *a = (int*)malloc(sizeof(a));
 }
