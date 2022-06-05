@@ -1,17 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <stdint.h>
 typedef void (*CALLBACK)(void*);
 
 typedef struct _tagObject
 {
-    CALLBACK cb;
+    CALLBACK cb; //void (*cb)(void*);
 }obj;
 
 void function_A(void *pParam)
 {
     char *str = (char *)pParam;
-    printf("Here is Function_A\n");
+    printf("Here is Function_A\n" );
 }
 
 void function_B(void *pParam)
@@ -52,4 +52,5 @@ int main(int argc, char const *argv[])
     }
 
     return 0;
+int *a = (int*)malloc(sizeof(a));
 }
