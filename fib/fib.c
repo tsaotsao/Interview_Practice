@@ -67,7 +67,6 @@ int fib_MatrixSol(int n)
 
 int main(int argc, char **argv)
 {
-    uint64_t ans = fib_MatrixSol(atoi(argv[1]));
-    printf("%llu\n", ans);
+    printf("%d\n",fib_rec(atoi(argv[1])));
     return 0;
 }
